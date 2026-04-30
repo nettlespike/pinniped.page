@@ -1,5 +1,33 @@
 {
 	"music": {
+		"🎵 - May 2026": {
+			"link": "PLTKwBiSgGBsghhNFCykpeNL0GdYd4v2GC",
+			"length": [20, "1:11:08"],
+			"added": "2026/04/30",
+			"updated": "2026/04/30",
+			"tracks": [
+				["Don&rsquo;t Say That", "Ruel", "Don&rsquo;t Say That", 2026],
+				["Time Go Fishing (from &ldquo;Project Hail Mary&rdquo;)", "Daniel Pemberton", "Project Hail Mary (Original Motion Picture Score)", 2026],
+				["Migraine", "BoyWithUke", "Lucid Dreams", 2023],
+				["I, Carrion (Icarian)", "Hozier", "Unreal Unearth: Unending", 2024],
+				["Buddy Holly", "Weezer", "Weezer (Blue Album)", 1994],
+				["antidepressants", "bbno$", "antidepressants", 2025],
+				["Living In A Haze", "Milky Chance", "Living In A Haze", 2023],
+				["Summerland", "half·alive", "Conditions Of A Punk", 2022],
+				["Babydoll", "Dominic Fike", "Don&rsquo;t Forget About Me, Demos", 2018],
+				["drop dead", "Olivia Rodrigo", "drop dead", 2026],
+				["Karma", "AJR", "Neotheater", 2019],
+				["Break My Face", "AJR", "Neotheater", 2019],
+				["Birthday Party", "AJR", "Neotheater", 2019],
+				["Finale (Can&rsquo;t Wait To See What You Do Next)", "AJR", "Neotheater", 2019],
+				["CHUCK THE MONEY", "Stephen Sanchez", "CHUCK THE MONEY", 2026],
+				["Potential", "sombr", "Potential", 2026],
+				["savior", "sombr", "savior", 2024],
+				["Doors", "Noah Kahan", "The Great Divide: The Last Of The Bugs", 2026],
+				["Hold Back The River", "James Bay", "Chaos And The Calm (Deluxe Edition)", 2014],
+				["Us", "James Bay", "Electric Light", 2018]
+			]
+		},
 		"🎵 - April 2026": {
 			"link": "PLTKwBiSgGBshMxhz8CV1xSZkBwVTyT9VI",
 			"length": [20, "1:11:35"],
@@ -1220,6 +1248,7 @@
 		}
 	},
 	"monthly": [
+		"🎵 - May 2026",
 		"🎵 - April 2026",
 		"🎵 - March 2026",
 		"🎵 - February 2026",
