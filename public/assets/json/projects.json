@@ -13,7 +13,7 @@
 			"tag": ["", ""]
 		},
 		"version": "",
-		"featured": 7
+		"featured": 0
 	},
 	"BezierCurves": {
 		"basic": false,
@@ -40,12 +40,12 @@
 		"flag": "",
 		"tags": {
 			"new": ["", ""],
-			"updated": ["January 21st/22nd", "heading snap, wording/clarification, switch to in-house proxy, other fixes and updates"],
+			"updated": ["", ""],
 			"beta": ["", ""],
 			"tag": ["", ""]
 		},
 		"version": "1.1.2",
-		"featured": 5
+		"featured": 0
 	},
 	"Bus Ride Bingo": {
 		"basic": false,
@@ -61,7 +61,7 @@
 			"tag": ["", ""]
 		},
 		"version": "2.3.3",
-		"featured": 6
+		"featured": 4
 	},
 	"Chess": {
 		"basic": true,
@@ -221,7 +221,7 @@
 			"tag": ["", ""]
 		},
 		"version": "2.1.2",
-		"featured": 3
+		"featured": 0
 	},
 	"Finite Craft": {
 		"basic": false,
@@ -319,6 +319,22 @@
 		"version": "",
 		"featured": 0
 	},
+	"ION details": {
+		"basic": true,
+		"icon": "watch-smart",
+		"path": "projects/watch",
+		"connected": true,
+		"description": "Know when the gates will lower with this Wear OS complication.",
+		"flag": "",
+		"tags": {
+			"new": ["May 2nd", "new page"],
+			"updated": ["", ""],
+			"beta": ["", ""],
+			"tag": ["", ""]
+		},
+		"version": "",
+		"featured": 3
+	},
 	"KC": {
 		"basic": false,
 		"icon": "keyboard",
@@ -413,7 +429,7 @@
 			"tag": ["", ""]
 		},
 		"version": "",
-		"featured": 8
+		"featured": 1
 	},
 	"PlainPlanes": {
 		"basic": true,
@@ -445,7 +461,7 @@
 			"tag": ["", ""]
 		},
 		"version": "",
-		"featured": 2
+		"featured": 5
 	},
 	"progress": {
 		"basic": false,
@@ -557,7 +573,7 @@
 			"tag": ["", ""]
 		},
 		"version": "",
-		"featured": 9
+		"featured": 2
 	},
 	"Think Four": {
 		"basic": false,
@@ -648,12 +664,12 @@
 		"flag": "",
 		"tags": {
 			"new": ["", ""],
-			"updated": ["February 2nd", "v2.5.1 > > > Singapore issue mention, Romania fix, maximum manual quantity upped to 100"],
+			"updated": ["", ""],
 			"beta": ["", ""],
 			"tag": ["", ""]
 		},
 		"version": "2.5.1",
-		"featured": 4
+		"featured": 0
 	},
 	"WandStuff": {
 		"basic": false,
@@ -685,7 +701,7 @@
 			"tag": ["", ""]
 		},
 		"version": "1.6.1",
-		"featured": 1
+		"featured": 0
 	},
 	"Words": {
 		"basic": false,

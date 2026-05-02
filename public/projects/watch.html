@@ -1,0 +1,223 @@
+<!doctype html>
+
+<html lang="en-CA">
+	<head>
+		<title>ION details</title>
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#4ecdc4" />
+
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/scrollbar.css" />
+		<link rel="icon" href="../assets/png/icon.png" />
+
+		<script src="../assets/js/console-styles.js"></script>
+		<script src="../assets/js/menu.js"></script>
+
+		<script src="https://kit.fontawesome.com/c6ef7d4818.js" crossorigin="anonymous"></script>
+
+		<meta property="og:url" content="https://pinniped.page/projects/watch" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="ION details" />
+		<meta property="og:description" content="Wear OS complication to show next estimated Transit Plaza grade crossing activation on custom watch face." />
+		<meta property="og:image" content="https://pinniped.page/assets/png/icon.png" />
+
+		<meta name="description" content="Wear OS complication to show next estimated Transit Plaza grade crossing activation on custom watch face." />
+		<meta name="keywords" content="wear, watch, complication, data, transit, transportation, train, custom, face, tool, useful, fun" />
+	</head>
+
+	<body class="fa-width-auto">
+		<div class="navbar">
+			<a class="invert navbar-item" href="../index.html"><img class="navbar-icon" src="../assets/png/icon.png" alt="pinniped.page logo" /></a>
+			<a class="invert navbar-item item1" href="../projects.html"><p>Projects</p></a>
+			<a class="invert navbar-item item2" href="../blog.html"><p>Blog</p></a>
+			<a class="invert navbar-item item3" href="../about.html"><p>About</p></a>
+
+			<i id="menu-open" class="fas fa-bars invert navbar-item-mobile" onclick="menu()"></i>
+			<i id="menu-close" class="fas fa-times invert navbar-item-mobile" onclick="menu()"></i>
+		</div>
+
+		<div id="navbar-mobile">
+			<h2 class="navbar-item-mobile-2"><a class="invert" href="../index.html">Home</a></h2>
+			<h2 class="navbar-item-mobile-2"><a class="invert" href="../projects.html">Projects</a></h2>
+			<h2 class="navbar-item-mobile-2"><a class="invert" href="../blog.html">Blog</a></h2>
+			<h2 class="navbar-item-mobile-2"><a class="invert" href="../about.html">About</a></h2>
+		</div>
+
+		<div class="main">
+			<div class="navbar-space"></div>
+
+			<div class="content-container">
+				<div class="content">
+					<h2 class="title">ION details</h2>
+
+					<div class="break"></div>
+
+					<p class="project-top-link">
+						<span class="blog-archive-list-marker"><i class="fa-brands fa-github"></i></span>
+						<span class="blog-archive-list-item"
+							><a class="link" href="https://github.com/ObsidianSeal/ION-details" title="GitHub > ObsidianSeal/ION-details [EXTERNAL]"
+								>GitHub repository</a
+							></span
+						>
+					</p>
+					<p class="project-top-link">
+						<span class="blog-archive-list-marker"><i class="fa-brands fa-discord"></i></span>
+						<span class="blog-archive-list-item"><a class="link" href="https://ite.fyi/ss" title="join Seal Squad [EXTERNAL]">discuss on Discord</a></span>
+					</p>
+					<p class="project-top-link">
+						<span class="blog-archive-list-marker"><i class="fa-solid fa-robot"></i></span>
+						<span class="blog-archive-list-item"
+							><a class="link" href="omega-seal.html" title="Omega Seal">experience this project through my Discord bot</a></span
+						>
+					</p>
+					<p class="project-top-link">
+						<span class="blog-archive-list-marker"><i class="fa-solid fa-bus"></i></span>
+						<span class="blog-archive-list-item"><a class="link" href="bus-data.html" title="BUS DATA">another application of GTFS data: BUS DATA</a></span>
+					</p>
+
+					<div class="break"></div>
+
+					<img
+						class="big-picture"
+						src="../assets/jpg/watch.jpg"
+						alt="the final product, working as intended, as can be seen by the blurry lights in the background"
+						title="the final product, working as intended, as can be seen by the blurry lights in the background"
+					/>
+
+					<div class="break"></div>
+
+					<div class="on-this-page"></div>
+
+					<div class="break"></div>
+
+					<h4 class="subheading">
+						<div><span class="title">the problem</span></div>
+						<i class="fa-solid fa-face-meh"></i>
+					</h4>
+
+					<div class="break"></div>
+
+					<p class="text">
+						I can&rsquo;t get to class without crossing the ION tracks&hairsp;—&hairsp;the ION being
+						<a href="https://en.wikipedia.org/wiki/Ion_rapid_transit" class="link" title="Wikipedia > Ion rapid transit [EXTERNAL]"
+							>the Region of Waterloo&rsquo;s LRT</a
+						>, with trains passing campus about every five minutes. This frequency, while great for getting away from campus, seems to make it so I am stopped by
+						a train every time I want to cross the tracks. If only I had a quick way to see in advance when the crossing gates would come down....
+					</p>
+
+					<div class="break"></div>
+
+					<h4 class="subheading">
+						<div><span class="title">the solution</span></div>
+						<i class="fa-solid fa-database"></i>
+					</h4>
+
+					<div class="break"></div>
+
+					<p class="text">
+						<a href="https://www.grt.ca/en/index.aspx" class="link" title="Grand River Transit [EXTERNAL]">Grand River Transit</a>, the agency behind the ION, has
+						<a href="https://gtfs.org/" class="link" title="Home - General Transit Feed Specification [EXTERNAL]">GTFS</a>
+						<a href="https://webapps.regionofwaterloo.ca/api/grt-routes/" class="link" title="&ldquo;GRT GTFS Real-time Publishing Tool&rdquo; [EXTERNAL]"
+							>data available</a
+						>
+						to anyone who wants it. I had already worked with
+						<a href="https://corsproxy.pinniped.page/" class="link" title="example raw GTFS data">GTFS data</a> to make
+						<a href="bus-data.html" class="link" title="BUS DATA">BUS DATA</a>, which you should check out later. I thought, if I can determine when the trains
+						will arrive at the station, I can extrapolate when the adjacent grade crossing will activate. Some constant offset for both northbound and southbound
+						trains should do the trick.
+					</p>
+
+					<div class="break"></div>
+
+					<h4 class="subheading">
+						<div><span class="title">the execution</span></div>
+						<i class="fa-solid fa-watch-smart"></i>
+					</h4>
+
+					<div class="break"></div>
+
+					<p class="text">
+						The main goal was to make something that was super quick to access, so that I could find out as I was walking up to the crossing whether I should slow
+						down or start running.<br /><br />To ensure I knew how to work with
+						<a href="https://webapps.regionofwaterloo.ca/api/grt-routes/" class="link" title="&ldquo;GRT GTFS Real-time Publishing Tool&rdquo; [EXTERNAL]"
+							>GRT&rsquo;s data</a
+						>, I added a command to <a href="omega-seal.html" class="link" title="Omega Seal">my Discord bot</a> that would give ION arrival times and use them to
+						estimate the grade crossing activation time. It worked well: I could pull out my phone, send the command, and get all the information I needed. But
+						what&rsquo;s faster than typing something into a phone? A flick of the wrist.<br /><br />I happen to have a
+						<a href="https://en.wikipedia.org/wiki/Pixel_Watch" class="link" title="Wikipedia > Pixel Watch [EXTERNAL]">Google Pixel Watch</a>, so with the goal
+						of making the data as easy to access as possible, I entered the world of custom watch faces,
+						<a href="https://developer.android.com/training/wearables/complications" class="link" title="About complications [EXTERNAL]">Wear OS complications</a
+						>, and everything that entails. I started by making a custom watch face in
+						<a href="https://developer.samsung.com/watch-face-studio/overview.html" class="link" title="Watch Face Studio [EXTERNAL]">Watch Face Studio</a>, the
+						one in the picture at the top of this page. I would love it even if it didn&rsquo;t do something unique, I&rsquo;m glad I was able to use
+						<a href="https://coolors.co/4d6889-588e5d-cd9556-ffffff-000000" class="link" title="Coolors > 4d6889-588e5d-cd9556-ffffff-000000 [EXTERNAL]"
+							>nice colours</a
+						>
+						and <a href="https://www.departuremono.com/" class="link" title="Departure Mono [EXTERNAL]">a font of my choice</a>.<br /><br /><img
+							class="big-picture"
+							src="../assets/png/ion-details.png"
+							alt="the watch face, as described below"
+							title="the watch face, as described below"
+						/><br /><br />It shows the following information.<br />
+					</p>
+					<ul>
+						<li>The date, formatted the way I prefer</li>
+						<li>Battery level, heart rate, and step count</li>
+						<li>The time, of course, in twenty-four-hour format</li>
+						<li>The day&rsquo;s low, current, and high temperature</li>
+						<li><span class="highlighted">ION_details</span>, which in the watch face designer is just a placeholder</li>
+					</ul>
+					<p class="text">
+						<br />The watch face was quite easy to make, but the
+						<a href="https://en.wikipedia.org/wiki/Complication_(horology)" class="link" title="Wikipedia > Complication (horology) [EXTERNAL]">complication</a>
+						that was to replace <span class="highlighted">ION_details</span> was not.
+						<a href="https://www.android.com/" class="link" title="Android [EXTERNAL]">Android</a> apps, and by extension
+						<a href="https://developer.android.com/training/wearables/complications" class="link" title="About complications [EXTERNAL]">Wear OS complications</a
+						>, are written in <a href="https://kotlinlang.org/" class="link" title="Kotlin [EXTERNAL]">Kotlin</a>, a language I had never used before. I had
+						<a href="https://gemini.google.com/" class="link" title="Google Gemini [EXTERNAL]">Gemini</a>, part of
+						<a href="https://developer.android.com/studio" class="link" title="Android Studio [EXTERNAL]">Android Studio</a>, translate
+						<a href="https://github.com/ObsidianSeal/Omega-Seal-The-Square" class="link" title="GitHub > ObsidianSeal/Omega-Seal-The-Square [EXTERNAL]"
+							>my original Discord bot JavaScript</a
+						>
+						into <a href="https://kotlinlang.org/" class="link" title="Kotlin [EXTERNAL]">Kotlin</a>. Then I had to fight with
+						<a href="https://gemini.google.com/" class="link" title="Google Gemini [EXTERNAL]">Gemini</a> to get all the dependencies properly imported and
+						functioning. Not fun, but it worked out in the end.<br /><br />Two times are shown at the bottom of the watch face, as you can see in the picture at
+						the top of this page. The first time is when the data was fetched, and the second is the estimated grade crossing activation time. Only minutes and
+						seconds are shown to save space. It&rsquo;s useful to know when the calculation was performed so you know if it&rsquo;s at all accurate.
+					</p>
+
+					<div class="break"></div>
+
+					<h4 class="subheading">
+						<div><span class="title">the results</span></div>
+						<i class="fa-solid fa-person-running-fast"></i>
+					</h4>
+
+					<div class="break"></div>
+
+					<p class="text">
+						It works really well! Except...much of the time. Turns out, to AGGRESSIVELY save battery life, the frequency of complication updates are dictated by
+						the watch. So the time is often for a train that passed way earlier. I tried my hardest to force it to update frequently, but to no avail. It works
+						well enough though. I&rsquo;m super happy with it.
+					</p>
+
+					<div class="content-end"></div>
+
+					<b class="small-text half-opacity">LAST UPDATED: May 2nd, 2026</b>
+				</div>
+			</div>
+
+			<div class="footer" style="background: #ffffee"></div>
+			<div class="footer" style="background: #ff6b6b"></div>
+			<div class="footer" style="background: #ffe66d"></div>
+			<div class="footer" style="background: #4ecdc4"></div>
+		</div>
+
+		<script src="../assets/js/to-top.js"></script>
+		<script src="../assets/js/auto-project-link-target.js" type="module"></script>
+		<script src="../assets/js/on-this-page.js"></script>
+		<script src="../assets/js/id-link-scroll-up.js"></script>
+	</body>
+</html>
