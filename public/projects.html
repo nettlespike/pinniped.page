@@ -184,10 +184,7 @@
 				let tags = "";
 				if (project.tags.new[0] != "" || project.tags.updated[1] != "" || project.tags.beta[2] != "" || project.tags.tag[3] != "") {
 					for (let thing in project.tags) {
-						if (project.tags[thing][0] != "")
-							tags += `<span class="${thing}"><span class="tooltip">${project.tags[thing][0]} — ${
-								project.tags[thing][1]
-							}</span>&nbsp;${thing.toUpperCase()}&nbsp;</span>`;
+						if (project.tags[thing][0] != "") tags += `<span class="${thing}"><span class="tooltip">${project.tags[thing][0]} — ${project.tags[thing][1]}</span>&nbsp;${thing.toUpperCase()}&nbsp;</span>`;
 					}
 					tags = "<span>" + tags + "</span>";
 				}
@@ -285,13 +282,7 @@
 					.querySelector("#randomProjectButton")
 					.setAttribute(
 						"href",
-						`projects+.html?search=%5E${encodeURIComponent(
-							projectNames[Math.floor(Math.random() * projectNames.length)]
-								.replace(/\//g, "\\/")
-								.replace(/\+/g, "\\+")
-								.replace(/\-/g, "\\-")
-								.replace(/&/g, "&amp;"),
-						)}%24&r=t`,
+						`projects+.html?search=%5E${encodeURIComponent(projectNames[Math.floor(Math.random() * projectNames.length)].replace(/\//g, "\\/").replace(/\+/g, "\\+").replace(/\-/g, "\\-").replace(/&/g, "&amp;"))}%24&r=t`,
 					);
 			}
 

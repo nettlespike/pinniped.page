@@ -3049,46 +3049,12 @@
 				let busDataDate = new Date(busDataHeader.timestamp * 1000);
 				let month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][busDataDate.getMonth()];
 				let day = busDataDate.getDate();
-				let ordinal = [
-					"st",
-					"nd",
-					"rd",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"st",
-					"nd",
-					"rd",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"th",
-					"st",
-				][busDataDate.getDate() - 1];
+				let ordinal = ["st", "nd", "rd", "th", "th", "th", "th", "th", "th", "th", "th", "th", "th", "th", "th", "th", "th", "th", "th", "th", "st", "nd", "rd", "th", "th", "th", "th", "th", "th", "th", "st"][busDataDate.getDate() - 1];
 				let year = busDataDate.getFullYear();
 				let hour = busDataDate.getHours();
 				let minute = busDataDate.getMinutes();
 				let second = busDataDate.getSeconds();
-				document.querySelector("#data-time").innerHTML = `${month} ${day}${ordinal}, ${year} @ ${hour}:${minute.toString().padStart(2, "0")}:${second
-					.toString()
-					.padStart(2, "0")}`;
+				document.querySelector("#data-time").innerHTML = `${month} ${day}${ordinal}, ${year} @ ${hour}:${minute.toString().padStart(2, "0")}:${second.toString().padStart(2, "0")}`;
 			}
 
 			// where the cool stuff happens
@@ -3679,9 +3645,7 @@
 							let icon = "xmark";
 							if (fleetObject[bus][0] == "D60LFR" || fleetObject[bus][0] == "XD60") icon = "check";
 
-							document.querySelector(".map-tooltip").innerHTML = `<span>${array[0].toString().padStart(2, "0")}</span> @ ${array[1]
-								.toString()
-								.padEnd(8, "0")}, ${array[2].toString().padEnd(9, "0")}<br />#${bus} — ${
+							document.querySelector(".map-tooltip").innerHTML = `<span>${array[0].toString().padStart(2, "0")}</span> @ ${array[1].toString().padEnd(8, "0")}, ${array[2].toString().padEnd(9, "0")}<br />#${bus} — ${
 								fleetObject[bus][0]
 							}&nbsp;&nbsp;<i class="fa-sharp fa-regular fa-${icon} fa-sm"></i>`;
 						}
@@ -3802,10 +3766,7 @@
 
 	<body class="fa-width-auto">
 		<div class="main-panel hide">
-			<h1>
-				<i class="fa-sharp fa-solid fa-bus"></i> <span>B</span><span>U</span><span>S</span> <span>D</span><span style="translate: -5px 0">A</span
-				><span style="translate: -15px 0">T</span><span style="translate: -25px 0">A</span>
-			</h1>
+			<h1><i class="fa-sharp fa-solid fa-bus"></i> <span>B</span><span>U</span><span>S</span> <span>D</span><span style="translate: -5px 0">A</span><span style="translate: -15px 0">T</span><span style="translate: -25px 0">A</span></h1>
 
 			<br />
 
@@ -3820,23 +3781,13 @@
 			<b id="QUICK-LINKS">QUICK LINKS <a href="#QUICK-LINKS" title="click to move to &ldquo;QUICK LINKS&rdquo;">#</a></b>
 			<ul>
 				<li>
-					<a
-						href="https://realtime.londontransit.ca/#/app/nextdepartures"
-						title="&ldquo;INFO-Web Transit Information&rdquo; / &ldquo;LTC - Next departures&rdquo; / &ldquo;Real-Time&rdquo; [EXTERNAL]"
-						>LTC realtime</a
-					>
+					<a href="https://realtime.londontransit.ca/#/app/nextdepartures" title="&ldquo;INFO-Web Transit Information&rdquo; / &ldquo;LTC - Next departures&rdquo; / &ldquo;Real-Time&rdquo; [EXTERNAL]">LTC realtime</a>
 				</li>
 				<li>
-					<a
-						href="https://www.londontransit.ca/wp-content/uploads/2024/09/LT_SystemMap_September2024_Final_Web.pdf"
-						title="LTC > Routes & Schedules > LT_SystemMap_September2024_Final_Web.pdf [FILE; EXTERNAL]"
-						>LTC Ride Guide</a
-					>
+					<a href="https://www.londontransit.ca/wp-content/uploads/2024/09/LT_SystemMap_September2024_Final_Web.pdf" title="LTC > Routes & Schedules > LT_SystemMap_September2024_Final_Web.pdf [FILE; EXTERNAL]">LTC Ride Guide</a>
 				</li>
 				<li>
-					<a href="https://cptdb.ca/wiki/index.php/London_Transit_Commission" title="CPTDB wiki > London Transit Commission [EXTERNAL]"
-						>CPTDB wiki — London Transit Commission</a
-					>
+					<a href="https://cptdb.ca/wiki/index.php/London_Transit_Commission" title="CPTDB wiki > London Transit Commission [EXTERNAL]">CPTDB wiki — London Transit Commission</a>
 				</li>
 				<li><a href="../projects+.html" title="pinniped.page — Projects+">return to the Projects+ page</a></li>
 				<li><a href="brb.html" title="Bus Ride Bingo">Bus Ride Bingo</a></li>
@@ -3882,20 +3833,19 @@
 
 			<b id="BUS-TOTALS">BUS TOTALS <a href="#BUS-TOTALS" title="click to move to &ldquo;BUS TOTALS&rdquo;">#</a></b>
 			<h2 id="total-info">
-				There <span class="grammar" id="total-grammar-1">are</span> <span id="bus-total">#</span> <span class="grammar" id="total-grammar-2">buses</span> in service,
-				making up <span id="bus-total-percent">%</span> of London Transit&rsquo;s fleet.
+				There <span class="grammar" id="total-grammar-1">are</span> <span id="bus-total">#</span> <span class="grammar" id="total-grammar-2">buses</span> in service, making up <span id="bus-total-percent">%</span> of London
+				Transit&rsquo;s fleet.
 			</h2>
 			<h2 id="total-none" class="hide">London Transit it not currently running any buses.</h2>
 			<h2 id="articulated-info">
-				<span class="grammar" id="articulated-grammar-1"></span> <span id="bus-total-articulated">#</span> of those buses
-				<span class="grammar" id="articulated-grammar-2">are</span> articulated, <span id="bus-total-articulated-partial-percent">%</span> of in-service buses and
-				<span id="bus-total-articulated-percent">%</span> of London Transit&rsquo;s fleet of articulated buses.
+				<span class="grammar" id="articulated-grammar-1"></span> <span id="bus-total-articulated">#</span> of those buses <span class="grammar" id="articulated-grammar-2">are</span> articulated,
+				<span id="bus-total-articulated-partial-percent">%</span> of in-service buses and <span id="bus-total-articulated-percent">%</span> of London Transit&rsquo;s fleet of articulated buses.
 			</h2>
 			<h2 id="articulated-none" class="hide">None of them are articulated.</h2>
 			<h2 id="articulated-none-one" class="hide">It is not articulated.</h2>
 			<h2 id="articulated-one-one" class="hide">
-				That <span id="bus-total-articulated-2">#</span> bus is articulated, <span id="bus-total-articulated-partial-percent-2">%</span> of in-service buses and
-				<span id="bus-total-articulated-percent-2">%</span> of London Transit&rsquo;s fleet of articulated buses.
+				That <span id="bus-total-articulated-2">#</span> bus is articulated, <span id="bus-total-articulated-partial-percent-2">%</span> of in-service buses and <span id="bus-total-articulated-percent-2">%</span> of London Transit&rsquo;s
+				fleet of articulated buses.
 			</h2>
 
 			<br />
@@ -3907,8 +3857,8 @@
 			</p>
 			<p>
 				If a <a href="https://www.londontransit.ca/plan-a-trip/schedules/" title="London Transit > Routes & Schedules [EXTERNAL]">route</a> has at least one
-				<a href="https://en.wikipedia.org/wiki/Articulated_bus" title="Wikipedia > Articulated bus [EXTERNAL]">articulated bus</a> running on it, the number of said
-				buses is shown next to the total and reflected in a separate, teal segment of the corresponding bar.
+				<a href="https://en.wikipedia.org/wiki/Articulated_bus" title="Wikipedia > Articulated bus [EXTERNAL]">articulated bus</a> running on it, the number of said buses is shown next to the total and reflected in a separate, teal
+				segment of the corresponding bar.
 			</p>
 			<br />
 			<div class="route-container">
@@ -3918,31 +3868,22 @@
 				</div>
 			</div>
 			<br />
-			<p class="grey">
-				*the 100-series (<a href="https://en.wikipedia.org/wiki/Short_turn" class="grey" title="Wikipedia > Short turn [EXTERNAL]">short turn</a>) routes only run from
-				September to April (for university/college students)
-			</p>
+			<p class="grey">*the 100-series (<a href="https://en.wikipedia.org/wiki/Short_turn" class="grey" title="Wikipedia > Short turn [EXTERNAL]">short turn</a>) routes only run from September to April (for university/college students)</p>
 
 			<br />
 
 			<b id="BUS-POSITIONS-AND-MODELS">BUS POSITIONS & MODELS <a href="#BUS-POSITIONS-AND-MODELS" title="click to move to &ldquo;BUS POSITIONS & MODELS&rdquo;">#</a></b>
 			<p>
 				Below is a table of all <span id="fleet-total" class="bold">#</span> buses in
-				<a href="https://cptdb.ca/wiki/index.php/London_Transit_Commission#Fleet_roster" title="CPTDB wiki > London Transit Commission (Fleet roster) [EXTERNAL]"
-					>London Transit&rsquo;s fleet</a
-				>.
+				<a href="https://cptdb.ca/wiki/index.php/London_Transit_Commission#Fleet_roster" title="CPTDB wiki > London Transit Commission (Fleet roster) [EXTERNAL]">London Transit&rsquo;s fleet</a>.
 			</p>
-			<p>
-				Every vehicle has a unique fleet number. If a number is not present in the table, that almost certainly means that the bus with that number has been retired.
-				Click on each fleet number for more information about that bus.
-			</p>
+			<p>Every vehicle has a unique fleet number. If a number is not present in the table, that almost certainly means that the bus with that number has been retired. Click on each fleet number for more information about that bus.</p>
 			<p>
 				London Transit now operates only two bus models, both of which are produced in Canada by
 				<a href="https://www.newflyer.com/" title="New Flyer [EXTERNAL]">New Flyer</a>. Click on a model to learn more.
 			</p>
 			<p>
-				<span id="articulated-total" class="bold">#</span> of London Transit&rsquo;s buses are
-				<a href="https://en.wikipedia.org/wiki/Articulated_bus" title="Wikipedia > Articulated bus [EXTERNAL]">articulated</a>, or
+				<span id="articulated-total" class="bold">#</span> of London Transit&rsquo;s buses are <a href="https://en.wikipedia.org/wiki/Articulated_bus" title="Wikipedia > Articulated bus [EXTERNAL]">articulated</a>, or
 				<span id="articulated-percentage" class="bold">%</span> of the fleet.
 			</p>
 			<p>
@@ -3979,14 +3920,12 @@
 
 			<b id="ROUTE-MAPS">ROUTE MAPS <a href="#ROUTE-MAPS" title="click to move to &ldquo;ROUTE MAPS&rdquo;">#</a></b>
 			<p>
-				For ease of navigation, these maps simplify the routes into straight lines. This makes it very clear where certain routes diverge into lettered branches, have
-				different termini at certain times, or exhibit other quirks, making it easy to identify your destination and see the stops that lead up to it. Each direction
-				has its own map, so please pay attention to the file names.
+				For ease of navigation, these maps simplify the routes into straight lines. This makes it very clear where certain routes diverge into lettered branches, have different termini at certain times, or exhibit other quirks, making it
+				easy to identify your destination and see the stops that lead up to it. Each direction has its own map, so please pay attention to the file names.
 			</p>
 			<p>
 				These maps are made manually in
-				<a href="https://en.wikipedia.org/wiki/Affinity_Designer" title="Wikipedia > Affinity Designer [EXTERNAL]">Affinity Designer</a>, so they will be added/updated
-				very slowly.
+				<a href="https://en.wikipedia.org/wiki/Affinity_Designer" title="Wikipedia > Affinity Designer [EXTERNAL]">Affinity Designer</a>, so they will be added/updated very slowly.
 			</p>
 			<p>Please <a href="../contact.html" title="pinniped.page — Contact">report</a> any inaccuracies!</p>
 			<br />
@@ -4166,10 +4105,7 @@
 				</table>
 			</div>
 			<br />
-			<p class="grey">
-				*you can avoid downloading the files by right-clicking the &ldquo;DOWNLOAD&rdquo; button on the Download page and then clicking &ldquo;Open link in new
-				tab&rdquo;
-			</p>
+			<p class="grey">*you can avoid downloading the files by right-clicking the &ldquo;DOWNLOAD&rdquo; button on the Download page and then clicking &ldquo;Open link in new tab&rdquo;</p>
 
 			<br />
 			<br />
@@ -4196,20 +4132,12 @@
 				<li>
 					some data is entered manually, so be sure to check the date that this page was last updated (it&rsquo;s shown at the
 					<span id="to-top-text" title="click to scroll to the top of the page">top of the page</span>) or the
-					<a
-						href="https://github.com/ObsidianSeal/pinniped.page/commits/main/public/projects/bus-data.html"
-						title="GitHub > ObsidianSeal > pinniped.page > bus-data.html history [EXTERNAL]"
-						>GitHub commit history</a
-					>
+					<a href="https://github.com/ObsidianSeal/pinniped.page/commits/main/public/projects/bus-data.html" title="GitHub > ObsidianSeal > pinniped.page > bus-data.html history [EXTERNAL]">GitHub commit history</a>
 					to see how up-to-date it is
 				</li>
 				<li>
 					this page assumes the
-					<a
-						href="https://www.londontransit.ca/wp-content/uploads/2024/08/Route-51-55-Community-Bus.pdf"
-						title="LTC > Routes & Schedules > Route-51-55-Community-Bus.pdf [FILE; EXTERNAL]"
-						>Community Bus routes</a
-					>
+					<a href="https://www.londontransit.ca/wp-content/uploads/2024/08/Route-51-55-Community-Bus.pdf" title="LTC > Routes & Schedules > Route-51-55-Community-Bus.pdf [FILE; EXTERNAL]">Community Bus routes</a>
 					do not exist
 				</li>
 				<li>rounding errors are almost certainly present</li>
@@ -4219,9 +4147,7 @@
 
 			<b id="ATTRIBUTION">ATTRIBUTION <a href="#ATTRIBUTION" title="click to move to &ldquo;ATTRIBUTION&rdquo;">#</a></b>
 			<ul>
-				<li>
-					bus data from &ldquo;<a href="https://www.londontransit.ca/open-data/" title="LTC Open Data [EXTERNAL]">Open Data — London Transit Commission</a>&rdquo;
-				</li>
+				<li>bus data from &ldquo;<a href="https://www.londontransit.ca/open-data/" title="LTC Open Data [EXTERNAL]">Open Data — London Transit Commission</a>&rdquo;</li>
 				<li>
 					additional information from <a href="https://cptdb.ca/wiki/index.php/Main_Page" title="CPTDB wiki [EXTERNAL]">the CPTDB wiki</a>,
 					<a href="https://londontransit.ca/" title="London Transit&rsquo;s website [EXTERNAL]">London Transit&rsquo;s website</a>, and &ldquo;<a
@@ -4231,13 +4157,10 @@
 					>&rdquo;
 				</li>
 				<li>
-					<a href="https://developers.cloudflare.com/workers/examples/cors-header-proxy/" title="Cloudflare Docs > Workers > CORS header proxy [EXTERNAL]"
-						>CORS proxy powered by Cloudflare Workers</a
-					>
+					<a href="https://developers.cloudflare.com/workers/examples/cors-header-proxy/" title="Cloudflare Docs > Workers > CORS header proxy [EXTERNAL]">CORS proxy powered by Cloudflare Workers</a>
 				</li>
 				<li>
-					<a href="https://fonts.adobe.com/fonts/degular" title="Adobe Fonts > Degular [EXTERNAL]">Degular (typeface)</a> by
-					<a href="https://ohnotype.co/" title="OH no Type Co. [EXTERNAL]">OH no Type Co.</a> on
+					<a href="https://fonts.adobe.com/fonts/degular" title="Adobe Fonts > Degular [EXTERNAL]">Degular (typeface)</a> by <a href="https://ohnotype.co/" title="OH no Type Co. [EXTERNAL]">OH no Type Co.</a> on
 					<a href="" title="Adobe Fonts [EXTERNAL]">Adobe Fonts</a>
 				</li>
 				<li>icons from <a href="https://fontawesome.com/" title="Font Awesome [EXTERNAL]">Font Awesome</a></li>
@@ -4286,18 +4209,10 @@
 					<div class="map-menu-icon map-menu-button" id="map-menu-button-close" title="click to close the map (keyboard shortcut: &ldquo;ESCAPE&rdquo;)">
 						<i class="fa-sharp fa-solid fa-xmark"></i>
 					</div>
-					<div
-						class="map-menu-icon map-menu-button"
-						id="map-menu-button-settings"
-						title="click to edit the map&rsquo;s settings, click again to close (keyboard shortcut: &ldquo;SHIFT&rdquo;)"
-					>
+					<div class="map-menu-icon map-menu-button" id="map-menu-button-settings" title="click to edit the map&rsquo;s settings, click again to close (keyboard shortcut: &ldquo;SHIFT&rdquo;)">
 						<i class="fa-sharp fa-solid fa-sliders-simple"></i>
 					</div>
-					<div
-						class="map-menu-icon map-menu-button"
-						id="map-menu-button-info"
-						title="click to learn more about the map, click again to close (keyboard shortcut: &ldquo;SPACE&rdquo;)"
-					>
+					<div class="map-menu-icon map-menu-button" id="map-menu-button-info" title="click to learn more about the map, click again to close (keyboard shortcut: &ldquo;SPACE&rdquo;)">
 						<i class="fa-sharp fa-solid fa-info"></i>
 					</div>
 				</div>
@@ -4331,36 +4246,26 @@
 					<p>
 						<span>bus colours:</span
 						><span
-							><span class="settings-option selected-setting">LONDON TRANSIT</span><span class="settings-option">RED</span
-							><span class="settings-option">ORANGE</span><span class="settings-option">YELLOW</span><span class="settings-option">GREEN</span
-							><span class="settings-option">TEAL</span><span class="settings-option">BLUE</span><span class="settings-option">PURPLE</span></span
+							><span class="settings-option selected-setting">LONDON TRANSIT</span><span class="settings-option">RED</span><span class="settings-option">ORANGE</span><span class="settings-option">YELLOW</span
+							><span class="settings-option">GREEN</span><span class="settings-option">TEAL</span><span class="settings-option">BLUE</span><span class="settings-option">PURPLE</span></span
 						>
 					</p>
 					<br />
 					<p>
-						<span>trail segments:</span
-						><span
-							><span class="settings-option">1</span><span class="settings-option selected-setting">3</span><span class="settings-option">5</span
-							><span class="settings-option">ALL</span></span
-						>
+						<span>trail segments:</span><span><span class="settings-option">1</span><span class="settings-option selected-setting">3</span><span class="settings-option">5</span><span class="settings-option">ALL</span></span>
 					</p>
 					<br />
 					<p>
 						<span>routes:</span
 						><span
-							><span class="settings-option">01</span><span class="settings-option">02</span><span class="settings-option">03</span
-							><span class="settings-option">04</span><span class="settings-option">05</span><span class="settings-option">06</span
-							><span class="settings-option">07</span><span class="settings-option">09</span><span class="settings-option">10</span
-							><span class="settings-option">12</span><span class="settings-option">13</span><span class="settings-option">15</span
-							><span class="settings-option">16</span><span class="settings-option">17</span><span class="settings-option">19</span
-							><span class="settings-option">20</span><span class="settings-option">24</span><span class="settings-option">25</span
-							><span class="settings-option">27</span><span class="settings-option">28</span><span class="settings-option">30</span
-							><span class="settings-option">31</span><span class="settings-option">33</span><span class="settings-option">34</span
-							><span class="settings-option">35</span><span class="settings-option">36</span><span class="settings-option">37</span
-							><span class="settings-option">38</span><span class="settings-option">90</span><span class="settings-option">91</span
-							><span class="settings-option">92</span><span class="settings-option">93</span><span class="settings-option">94</span
-							><span class="settings-option">95</span><span class="settings-option">102</span><span class="settings-option">104</span
-							><span class="settings-option">106</span><span class="settings-option">127</span><span class="settings-option selected-setting">ALL</span></span
+							><span class="settings-option">01</span><span class="settings-option">02</span><span class="settings-option">03</span><span class="settings-option">04</span><span class="settings-option">05</span
+							><span class="settings-option">06</span><span class="settings-option">07</span><span class="settings-option">09</span><span class="settings-option">10</span><span class="settings-option">12</span
+							><span class="settings-option">13</span><span class="settings-option">15</span><span class="settings-option">16</span><span class="settings-option">17</span><span class="settings-option">19</span
+							><span class="settings-option">20</span><span class="settings-option">24</span><span class="settings-option">25</span><span class="settings-option">27</span><span class="settings-option">28</span
+							><span class="settings-option">30</span><span class="settings-option">31</span><span class="settings-option">33</span><span class="settings-option">34</span><span class="settings-option">35</span
+							><span class="settings-option">36</span><span class="settings-option">37</span><span class="settings-option">38</span><span class="settings-option">90</span><span class="settings-option">91</span
+							><span class="settings-option">92</span><span class="settings-option">93</span><span class="settings-option">94</span><span class="settings-option">95</span><span class="settings-option">102</span
+							><span class="settings-option">104</span><span class="settings-option">106</span><span class="settings-option">127</span><span class="settings-option selected-setting">ALL</span></span
 						>
 					</p>
 				</div>
@@ -4370,16 +4275,11 @@
 					</div>
 					<b>ABOUT THE MAP</b>
 					<ul>
-						<li>
-							you can change how the map looks and edit some of the map&rsquo;s other settings by clicking the &ldquo;sliders&rdquo; icon in the top right or
-							by pressing &ldquo;SHIFT&rdquo;
-						</li>
+						<li>you can change how the map looks and edit some of the map&rsquo;s other settings by clicking the &ldquo;sliders&rdquo; icon in the top right or by pressing &ldquo;SHIFT&rdquo;</li>
 						<li>the data still automatically updates every 30 seconds, here the countdown is shown in the bottom right</li>
 						<li>
 							hover over the map to see your cursor&rsquo;s approximate
-							<a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system" title="Wikipedia > Geographic coordinate system [EXTERNAL]"
-								>latitude and longitude</a
-							>
+							<a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system" title="Wikipedia > Geographic coordinate system [EXTERNAL]">latitude and longitude</a>
 							in the bottom left
 						</li>
 						<li>the tiny dots are bus stops, all <span class="bold" id="total-stops">#</span> of them</li>
@@ -4391,26 +4291,17 @@
 						<li>buses have a trail that shows where they have been recently</li>
 						<li>hover over a bus to learn more about it (the information from the main table is shown)</li>
 						<li id="route-colour-list">
-							<a
-								href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSePp-_I8d5CI0tgt7H_mAmRI527HUfBBh-GthT0U72PYxZJb8rLhlQ-Ayt9q3_ymbXT418DQf_QDRc/pubhtml"
-								title="Google Sheets > LTC Route Colours [EXTERNAL]"
+							<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSePp-_I8d5CI0tgt7H_mAmRI527HUfBBh-GthT0U72PYxZJb8rLhlQ-Ayt9q3_ymbXT418DQf_QDRc/pubhtml" title="Google Sheets > LTC Route Colours [EXTERNAL]"
 								>route colours</a
 							>
 							are specified by
-							<a
-								href="https://realtime.londontransit.ca/#/app/nextdepartures"
-								title="&ldquo;INFO-Web Transit Information&rdquo; / &ldquo;LTC - Next departures&rdquo; / &ldquo;Real-Time&rdquo; [EXTERNAL]"
-								>London Transit</a
-							>
+							<a href="https://realtime.londontransit.ca/#/app/nextdepartures" title="&ldquo;INFO-Web Transit Information&rdquo; / &ldquo;LTC - Next departures&rdquo; / &ldquo;Real-Time&rdquo; [EXTERNAL]">London Transit</a>
 							as follows:<br />
 						</li>
 						<li>
 							to see the routes&rsquo;
-							<a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet" title="Wikipedia > Web colors > Hex triplet">hex codes</a>, hover over the route
-							numbers above or visit
-							<a
-								href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSePp-_I8d5CI0tgt7H_mAmRI527HUfBBh-GthT0U72PYxZJb8rLhlQ-Ayt9q3_ymbXT418DQf_QDRc/pubhtml"
-								title="Google Sheets > LTC Route Colours [EXTERNAL]"
+							<a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet" title="Wikipedia > Web colors > Hex triplet">hex codes</a>, hover over the route numbers above or visit
+							<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSePp-_I8d5CI0tgt7H_mAmRI527HUfBBh-GthT0U72PYxZJb8rLhlQ-Ayt9q3_ymbXT418DQf_QDRc/pubhtml" title="Google Sheets > LTC Route Colours [EXTERNAL]"
 								>my route colours list and route map progress tracker</a
 							>
 						</li>
@@ -4429,17 +4320,11 @@
 					<span><a href="" title="this page (click to refresh)">BUS DATA</a> v1.1.2</span>
 				</p>
 				<br />
-				<p>
-					<a href="../status.html#BUS-DATA" title="pinniped.page — Status">website status</a>/<a href="../contact.html" title="pinniped.page — Contact"
-						>report a problem</a
-					>
-				</p>
+				<p><a href="../status.html#BUS-DATA" title="pinniped.page — Status">website status</a>/<a href="../contact.html" title="pinniped.page — Contact">report a problem</a></p>
 			</div>
 		</div>
 
-		<div class="error-panel hide" id="error-data-fetch">
-			<i class="fa-sharp fa-solid fa-triangle-exclamation"></i>ERROR: COULD NOT FETCH DATA — RETRYING<d id="d1">.</d><d id="d2">.</d><d id="d3">.</d>
-		</div>
+		<div class="error-panel hide" id="error-data-fetch"><i class="fa-sharp fa-solid fa-triangle-exclamation"></i>ERROR: COULD NOT FETCH DATA — RETRYING<d id="d1">.</d><d id="d2">.</d><d id="d3">.</d></div>
 		<div class="error-panel warning hide" id="error-data-old"><i class="fa-sharp fa-solid fa-triangle-exclamation"></i>WARNING: DATA IS OVER A MINUTE OLD</div>
 	</body>
 

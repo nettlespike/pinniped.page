@@ -364,19 +364,16 @@
 				</div>
 			</div>
 			<div class="text">
-				<b class="button" id="submit" title="&gt; CLICK/TAP TO SUBMIT/SHARE BOARD & GENERATE ANOTHER &lt;"
-					>&nbsp;&gt; CLICK/TAP TO SUBMIT/SHARE BOARD & GENERATE ANOTHER &lt;&nbsp;</b
-				><br /><br />
-				<b class="button" id="resize" title="&gt; CLICK/TAP TO AUTO-RESIZE BINGO BOARD TEXT &lt;">&nbsp;&gt; CLICK/TAP TO AUTO-RESIZE BINGO BOARD TEXT &lt;&nbsp;</b
-				><br /><br />
+				<b class="button" id="submit" title="&gt; CLICK/TAP TO SUBMIT/SHARE BOARD & GENERATE ANOTHER &lt;">&nbsp;&gt; CLICK/TAP TO SUBMIT/SHARE BOARD & GENERATE ANOTHER &lt;&nbsp;</b><br /><br />
+				<b class="button" id="resize" title="&gt; CLICK/TAP TO AUTO-RESIZE BINGO BOARD TEXT &lt;">&nbsp;&gt; CLICK/TAP TO AUTO-RESIZE BINGO BOARD TEXT &lt;&nbsp;</b><br /><br />
 				<b>Bus Ride Bingo</b>
 				<ul>
 					<li>24 of 60 possible events are randomly selected (plus the free square in the centre) and used to populate this 5-by-5 bingo card</li>
 					<li>click or tap on a square to highlight it</li>
 					<li>getting 5 in a row triggers confetti!</li>
 					<li>
-						when you&rsquo;re done, whether or not you won, please press the <b>&ldquo;CLICK/TAP TO SUBMIT/SHARE BOARD & GENERATE ANOTHER&rdquo;</b> button to log
-						the events of your ride, copy the text representation of your board, and refresh the page
+						when you&rsquo;re done, whether or not you won, please press the <b>&ldquo;CLICK/TAP TO SUBMIT/SHARE BOARD & GENERATE ANOTHER&rdquo;</b> button to log the events of your ride, copy the text representation of your board,
+						and refresh the page
 					</li>
 				</ul>
 				<br />
@@ -391,9 +388,7 @@
 				<ul>
 					<li>
 						confetti is disabled for those who
-						<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" title="MDN > prefers-reduced-motion"
-							>prefer reduced motion</a
-						>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" title="MDN > prefers-reduced-motion">prefer reduced motion</a>
 					</li>
 					<li>confetti only appears after the first bingo</li>
 					<li>reloading will generate a new board</li>
@@ -403,9 +398,7 @@
 					</li>
 					<li>scroll down for event statistics</li>
 					<li>
-						<a href="https://the-pinniped-page.myspreadshop.com/Bus+Ride+Bingo" title="shop.pinniped.page > Bus Ride Bingo [EXTERNAL]"
-							>you can now get Bus Ride Bingo...on a shirt!</a
-						>
+						<a href="https://the-pinniped-page.myspreadshop.com/Bus+Ride+Bingo" title="shop.pinniped.page > Bus Ride Bingo [EXTERNAL]">you can now get Bus Ride Bingo...on a shirt!</a>
 					</li>
 				</ul>
 				<br />
@@ -501,12 +494,7 @@
 
 		// EMOJI ISOLATING & SQUARE TEXT FORMATTING ALGORITHM
 		function formatSquareText(string) {
-			string =
-				`<span>` +
-				string.substring(0, string.lastIndexOf(" ")) +
-				`</span><br /><span class="square-emoji">` +
-				string.substring(string.lastIndexOf(" ") + 1) +
-				`</span>`;
+			string = `<span>` + string.substring(0, string.lastIndexOf(" ")) + `</span><br /><span class="square-emoji">` + string.substring(string.lastIndexOf(" ") + 1) + `</span>`;
 			return string;
 		}
 
@@ -887,12 +875,7 @@
 						for (let game in games) {
 							if (Object.keys(games[game]).length == 2 && Object.keys(games[game]).includes("board") && Object.keys(games[game]).includes("times")) {
 								if (/^\|([x-]{5}\|){2}[x-]{2}x[x-]{2}\|([x-]{5}\|){2}$/.test(games[game].board)) {
-									if (
-										Object.keys(games[game].times).length == 3 &&
-										Object.keys(games[game].times).includes("end") &&
-										Object.keys(games[game].times).includes("start") &&
-										Object.keys(games[game].times).includes("total")
-									) {
+									if (Object.keys(games[game].times).length == 3 && Object.keys(games[game].times).includes("end") && Object.keys(games[game].times).includes("start") && Object.keys(games[game].times).includes("total")) {
 										if (!isNaN(games[game].times.end) && !isNaN(games[game].times.start) && !isNaN(games[game].times.total)) {
 											continue;
 										}

@@ -626,9 +626,7 @@
 	</head>
 
 	<body class="fa-width-auto" draggable="false">
-		<p id="backButton" style="display: none" class="button" tabindex="1">
-			<span class="material-symbols-outlined" style="translate: 0 2px; margin-right: 5px">navigate_before</span>Back
-		</p>
+		<p id="backButton" style="display: none" class="button" tabindex="1"><span class="material-symbols-outlined" style="translate: 0 2px; margin-right: 5px">navigate_before</span>Back</p>
 
 		<div id="board" draggable="false" style="display: none">
 			<div id="square1" tabindex="2"></div>
@@ -649,24 +647,13 @@
 		<p id="code" class="brown button" style="display: none" title="click to copy link" tabindex="0"></p>
 
 		<div class="menu">
-			<p id="exitButton" class="button" style="top: 10px; left: 20px" tabindex="0">
-				<span class="material-symbols-outlined" style="translate: 0 2px; margin-right: 5px">navigate_before</span>Exit
-			</p>
+			<p id="exitButton" class="button" style="top: 10px; left: 20px" tabindex="0"><span class="material-symbols-outlined" style="translate: 0 2px; margin-right: 5px">navigate_before</span>Exit</p>
 
 			<div class="main-menu">
 				<h1>TicTacToe</h1>
 				<p id="newGameButton" tabindex="0" style="user-select: none">NEW GAME</p>
 				<form name="joinGameForm" style="user-select: none">
-					<input
-						name="joinGameInput"
-						type="text"
-						placeholder="ENTER GAME CODE"
-						maxlength="5"
-						autocapitalize="off"
-						spellcheck="false"
-						autocomplete="off"
-						pattern="^[a-z]{5}$"
-					/>
+					<input name="joinGameInput" type="text" placeholder="ENTER GAME CODE" maxlength="5" autocapitalize="off" spellcheck="false" autocomplete="off" pattern="^[a-z]{5}$" />
 				</form>
 			</div>
 
@@ -1586,14 +1573,10 @@
 			document.querySelector("#data-move-last-o").innerHTML = `${moveNames[lastMovesO.indexOf(Math.max(...lastMovesO))]} <span>(${Math.max(...lastMovesO)})</span>`;
 
 			// 19.
-			document.querySelector("#data-move-first-null").innerHTML = `${moveNames[firstMovesTie.indexOf(Math.max(...firstMovesTie))]} <span>(${Math.max(
-				...firstMovesTie,
-			)})</span>`;
+			document.querySelector("#data-move-first-null").innerHTML = `${moveNames[firstMovesTie.indexOf(Math.max(...firstMovesTie))]} <span>(${Math.max(...firstMovesTie)})</span>`;
 
 			// 20.
-			document.querySelector("#data-move-last-null").innerHTML = `${moveNames[lastMovesTie.indexOf(Math.max(...lastMovesTie))]} <span>(${Math.max(
-				...lastMovesTie,
-			)})</span>`;
+			document.querySelector("#data-move-last-null").innerHTML = `${moveNames[lastMovesTie.indexOf(Math.max(...lastMovesTie))]} <span>(${Math.max(...lastMovesTie)})</span>`;
 		}
 
 		// --- TOOLTIPS ---

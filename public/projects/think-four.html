@@ -1144,26 +1144,17 @@
 			<div class="notice-panel green2">
 				<p>Welcome to <span class="game-name">Think Four</span>!</p>
 				<p>
-					There are 100 puzzles to play, but if you&rsquo;ve come from the main website the game will automatically open to the last daily puzzle. If this is your
-					first time playing, you probably want to start with
-					<a href="?puzzle=2024/04/01" title="play the first puzzle, from Monday, April 1st, 2024">the first one</a>, or a
-					<a id="notice-panel-random-link" href="" title="play a random puzzle">random puzzle</a>.
+					There are 100 puzzles to play, but if you&rsquo;ve come from the main website the game will automatically open to the last daily puzzle. If this is your first time playing, you probably want to start with
+					<a href="?puzzle=2024/04/01" title="play the first puzzle, from Monday, April 1st, 2024">the first one</a>, or a <a id="notice-panel-random-link" href="" title="play a random puzzle">random puzzle</a>.
 				</p>
 				<p>Daily puzzles ended a long time ago, but I would still like to thank everyone who gave me word, category, and puzzle suggestions.</p>
 				<p>
 					To learn more about the game, press
-					<a href="../download.html?x=think-four.pdf" title="Think Four information sheet (.pdf download)">the &ldquo;HELP!&rdquo; button</a> in the bottom left,
-					reach out through the <a href="../contact.html" title="pinniped.page — Contact">Contact</a> page, or just start exploring!
+					<a href="../download.html?x=think-four.pdf" title="Think Four information sheet (.pdf download)">the &ldquo;HELP!&rdquo; button</a> in the bottom left, reach out through the
+					<a href="../contact.html" title="pinniped.page — Contact">Contact</a> page, or just start exploring!
 				</p>
-				<p style="display: flex; justify-content: space-between">
-					<span>Thanks for playing!</span><span class="remove550" style="color: var(--grey60)">PRESS &ldquo;ESCAPE&rdquo; TO CLOSE</span>
-				</p>
-				<i
-					class="fa-solid fa-xmark notice-panel-exit"
-					style="width: 32px; display: flex; align-items: center; justify-content: center"
-					tabindex="0"
-					title="close notice panel"
-				></i>
+				<p style="display: flex; justify-content: space-between"><span>Thanks for playing!</span><span class="remove550" style="color: var(--grey60)">PRESS &ldquo;ESCAPE&rdquo; TO CLOSE</span></p>
+				<i class="fa-solid fa-xmark notice-panel-exit" style="width: 32px; display: flex; align-items: center; justify-content: center" tabindex="0" title="close notice panel"></i>
 			</div>
 		</div>
 
@@ -1521,8 +1512,7 @@
 				// --- PUZZLE SELECT & STATISTICS pt. 2 ---
 
 				document.querySelector(".puzzle-select-panel").innerHTML =
-					document.querySelector(".puzzle-select-panel").innerHTML +
-					`<div><span>PUZZLE NO.</span><span>DATE</span><span>AVG. RATING</span><span>NO. RATINGS</span><span>NO. SOLVES</span></div>`;
+					document.querySelector(".puzzle-select-panel").innerHTML + `<div><span>PUZZLE NO.</span><span>DATE</span><span>AVG. RATING</span><span>NO. RATINGS</span><span>NO. SOLVES</span></div>`;
 
 				let i = 0;
 				for (let puzzle in thinkFourData.puzzles) {
@@ -1546,18 +1536,14 @@
 
 					document.querySelector(".puzzle-select-panel").innerHTML =
 						document.querySelector(".puzzle-select-panel").innerHTML +
-						`<div><span>#${++i}</span><span><a href="?puzzle=${puzzle}">${toTextDate(
-							puzzle,
-						)}</a><i class="fa-solid fa-arrow-right-long"></i></span><span title="~${ratingValue}/5">${ratingString}</span><span>${
+						`<div><span>#${++i}</span><span><a href="?puzzle=${puzzle}">${toTextDate(puzzle)}</a><i class="fa-solid fa-arrow-right-long"></i></span><span title="~${ratingValue}/5">${ratingString}</span><span>${
 							object.puzzles[puzzle.replaceAll("/", "-")].ratings
 						}</span><span>${object.puzzles[puzzle.replaceAll("/", "-")].solves}</span></div>`;
 					if (puzzle == safeDate.replaceAll("-", "/")) {
 						document.querySelector(".puzzle-select-panel div:last-child").classList.add("current-selected-puzzle");
 						document.querySelector(".puzzle-select-panel div:last-child span:first-child").innerHTML = `#${i} <i class="fa-solid fa-arrow-left-long"></i>`;
 
-						document
-							.querySelector(".puzzle-select-panel div:last-child span:nth-child(2) :last-child")
-							.classList.replace("fa-arrow-right-long", "fa-location-dot");
+						document.querySelector(".puzzle-select-panel div:last-child span:nth-child(2) :last-child").classList.replace("fa-arrow-right-long", "fa-location-dot");
 					}
 				}
 
@@ -1577,9 +1563,7 @@
 			function setTitleWidth() {
 				// attempt at making title appear in a good spot
 				if (screenWidth > screenHeight) {
-					let titleStyle = `width: ${
-						document.querySelector(".board").getBoundingClientRect().left - document.querySelector("h1").getBoundingClientRect().left - 20
-					}px`;
+					let titleStyle = `width: ${document.querySelector(".board").getBoundingClientRect().left - document.querySelector("h1").getBoundingClientRect().left - 20}px`;
 					document.querySelector(".titles").style = titleStyle;
 				}
 			}
@@ -2090,24 +2074,7 @@
 			});
 
 			// --- WIN PANEL & SHARE ---
-			const winMessages = [
-				"you did it!",
-				"yippee!",
-				"yay!",
-				"incredible!",
-				"amazing!",
-				"wow!",
-				"excellent!",
-				"awesome!",
-				"super!",
-				"fantastic!",
-				"wonderful!",
-				"bingo!",
-				"way to go!",
-				"great!",
-				"brilliant!",
-				"splendid!",
-			];
+			const winMessages = ["you did it!", "yippee!", "yay!", "incredible!", "amazing!", "wow!", "excellent!", "awesome!", "super!", "fantastic!", "wonderful!", "bingo!", "way to go!", "great!", "brilliant!", "splendid!"];
 			document.querySelector(".win-title").innerHTML = winMessages[Math.floor(Math.random() * winMessages.length)];
 
 			document.querySelector(".win-buttons span:nth-child(1)").addEventListener("click", (e) => {

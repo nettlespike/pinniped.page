@@ -372,11 +372,7 @@
 			else
 				for (let i = 0; i < item.size; i++) {
 					let importedRating = item.get(i);
-					addRating(
-						decodeURIComponent(importedRating.substring(importedRating.indexOf("=") + 2)),
-						parseInt(importedRating.substring(importedRating.indexOf("=") + 1, importedRating.indexOf("=") + 2)),
-						false,
-					);
+					addRating(decodeURIComponent(importedRating.substring(importedRating.indexOf("=") + 2)), parseInt(importedRating.substring(importedRating.indexOf("=") + 1, importedRating.indexOf("=") + 2)), false);
 				}
 
 			window.addEventListener("load", () => {
