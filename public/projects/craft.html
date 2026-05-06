@@ -1582,7 +1582,7 @@
 				"university": ["solid", "building-columns", "dark-grey"],
 				"instrument": ["solid", "guitars", "green-cyan"],
 				"musician": ["solid", "user-music", "blue-violet"],
-				"YouTube Music": ["brands", "youtube", "red"],
+				"YouTube Music": ["solid", "play", "red"],
 				"CD": ["solid", "compact-disc", "dark-grey"],
 				"guitar": ["solid", "guitar", "tan"],
 				"song": ["solid", "list-music", "yellow"],
@@ -2268,27 +2268,7 @@
 				darkGrey.sort(collator.compare);
 
 				// combine and overwrite
-				discoveredItemsData = red.concat(
-					redOrange,
-					yellowOrange,
-					yellow,
-					peaGreen,
-					yellowGreen,
-					green,
-					greenCyan,
-					cyan,
-					cyanBlue,
-					blue,
-					blueViolet,
-					violet,
-					violetMagenta,
-					magenta,
-					magentaRed,
-					tan,
-					brown,
-					lightGrey,
-					darkGrey,
-				);
+				discoveredItemsData = red.concat(redOrange, yellowOrange, yellow, peaGreen, yellowGreen, green, greenCyan, cyan, cyanBlue, blue, blueViolet, violet, violetMagenta, magenta, magentaRed, tan, brown, lightGrey, darkGrey);
 
 				showSortedItems();
 			}
