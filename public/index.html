@@ -19,10 +19,7 @@
 		<meta property="og:url" content="https://pinniped.page/" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="pinniped.page" />
-		<meta
-			property="og:description"
-			content="Obsidian_Seal&rsquo;s personal website: a collection of boredom-busting games, useful tools, and other random thoughts or fun ideas."
-		/>
+		<meta property="og:description" content="Obsidian_Seal&rsquo;s personal website: a collection of boredom-busting games, useful tools, and other random thoughts or fun ideas." />
 		<meta property="og:image" content="https://pinniped.page/assets/png/icon.png" />
 
 		<meta name="description" content="Obsidian_Seal&rsquo;s personal website: a collection of boredom-busting games, useful tools, and other random thoughts or fun ideas." />
@@ -233,27 +230,7 @@
 			var pageLocation = "";
 			var pageName = "";
 			const ogSubtitle = document.querySelector("#subtitle").innerHTML;
-			const specialKeys = [
-				"ArrowUp",
-				"ArrowDown",
-				"ArrowLeft",
-				"ArrowRight",
-				"Escape",
-				"Insert",
-				"Delete",
-				"Backspace",
-				"Tab",
-				"Shift",
-				"CapsLock",
-				"Enter",
-				"Control",
-				"Alt",
-				"Meta",
-				"Home",
-				"End",
-				"PageUp",
-				"PageDown",
-			];
+			const specialKeys = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Escape", "Insert", "Delete", "Backspace", "Tab", "Shift", "CapsLock", "Enter", "Control", "Alt", "Meta", "Home", "End", "PageUp", "PageDown"];
 
 			document.addEventListener("keydown", (e) => {
 				if (e.key === "Shift" && !locationSelected) pageLocation = "projects/";

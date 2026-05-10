@@ -24,10 +24,7 @@
 		<meta property="og:image" content="https://pinniped.page/assets/png/icon.png" />
 
 		<meta name="description" content="Report problems, ask questions, raise concerns, provide feedback, get support, and comment on anything pinniped.page-related." />
-		<meta
-			name="keywords"
-			content="pinniped, page, obsidian_seal, seal, projects, blog, about, status, info, contact, report, ask, question, concerns, feedback, support, comment"
-		/>
+		<meta name="keywords" content="pinniped, page, obsidian_seal, seal, projects, blog, about, status, info, contact, report, ask, question, concerns, feedback, support, comment" />
 
 		<style>
 			::-webkit-scrollbar-thumb:hover {
@@ -89,8 +86,8 @@
 					</a>
 
 					<p class="text">
-						If you&rsquo;ve discovered an issue and want to report it, make sure I&rsquo;m not already aware of it by checking the <b>Status page</b>. You can
-						also go there to see what&rsquo;s currently being developed, unavailable, or full of bugs.
+						If you&rsquo;ve discovered an issue and want to report it, make sure I&rsquo;m not already aware of it by checking the <b>Status page</b>. You can also go there to see what&rsquo;s currently being developed, unavailable,
+						or full of bugs.
 					</p>
 
 					<a class="new-button small-text" href="status.html" title="pinniped.page — Status" style="margin: 10px 0 30px">
@@ -118,8 +115,7 @@
 
 					<p class="text">
 						Fill out the form below to send me an anonymous message. If the message necessitates a response, I will address it on
-						<a href="status.html" class="link-3" title="pinniped.page — Status">the Status page</a>, in a
-						<a href="blog.html" class="link-3" title="pinniped.page — Blog">Blog</a> post, through an announcement on
+						<a href="status.html" class="link-3" title="pinniped.page — Status">the Status page</a>, in a <a href="blog.html" class="link-3" title="pinniped.page — Blog">Blog</a> post, through an announcement on
 						<a href="https://ite.fyi/ss" class="link-3" title="join Seal Squad [EXTERNAL]">my Discord server</a>, or by some other means.
 					</p>
 
@@ -141,13 +137,7 @@
 						</div>
 						<div class="contact-form-subject">
 							<b>SUBJECT:</b>
-							<input
-								type="text"
-								autocomplete="off"
-								id="contact-form-subject"
-								placeholder="What&rsquo;s your message about? [MAX.: 100 CHARACTERS]"
-								maxlength="100"
-							/>
+							<input type="text" autocomplete="off" id="contact-form-subject" placeholder="What&rsquo;s your message about? [MAX.: 100 CHARACTERS]" maxlength="100" />
 						</div>
 						<textarea
 							id="contact-form-body"
@@ -185,13 +175,7 @@ Markdown formatting is partially supported."
 						account to create.
 					</p>
 
-					<a
-						class="new-button small-text"
-						id="contact-form-submit-button"
-						href="https://github.com/ObsidianSeal/pinniped.page/issues"
-						title="GitHub > Obsidian_Seal/pinniped.page > issues [EXTERNAL]"
-						style="margin: 10px 0 30px"
-					>
+					<a class="new-button small-text" id="contact-form-submit-button" href="https://github.com/ObsidianSeal/pinniped.page/issues" title="GitHub > Obsidian_Seal/pinniped.page > issues [EXTERNAL]" style="margin: 10px 0 30px">
 						<div>
 							<span>PINNIPED.PAGE ISSUES</span>
 							<span><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-angle-right"></i></span>
@@ -206,8 +190,8 @@ Markdown formatting is partially supported."
 					</h3>
 
 					<p class="text">
-						Working on the <span class="highlighted">pinniped.page</span> is my passion, but don&rsquo;t expect perfection. There will always be things that I
-						don&rsquo;t have the time or energy to fix or create. I am but one person.
+						Working on the <span class="highlighted">pinniped.page</span> is my passion, but don&rsquo;t expect perfection. There will always be things that I don&rsquo;t have the time or energy to fix or create. I am but one
+						person.
 					</p>
 
 					<a class="new-button small-text" href="about.html" title="pinniped.page — About" style="margin: 10px 0 0">
@@ -283,14 +267,7 @@ Markdown formatting is partially supported."
 				let messageSubject = document.querySelector("#contact-form-subject").value.replaceAll(/`/g, "<backtick>");
 				let messageBody = document.querySelector("#contact-form-body").value.replaceAll(/```/g, "<backticks>");
 
-				if (
-					messageSubject == "" ||
-					messageBody == "" ||
-					messageSubject.length > 100 ||
-					messageBody.length > 1500 ||
-					!types.includes(typeSelected) ||
-					!priorities.includes(prioritySelected)
-				) {
+				if (messageSubject == "" || messageBody == "" || messageSubject.length > 100 || messageBody.length > 1500 || !types.includes(typeSelected) || !priorities.includes(prioritySelected)) {
 					window.location.href = "yikes.html?s=406"; // "ERROR 406 / Not Acceptable"
 				} else {
 					await push(ref(database, "omega-seal/contact-form-messages"), {

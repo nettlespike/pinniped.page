@@ -275,9 +275,7 @@
 										}
 
 										if (count < 2) {
-											document.getElementById("textSpace").innerHTML =
-												document.getElementById("textSpace").innerHTML +
-												`<b>${childNodes.val().date.year}/${newMonth}/${newDay} ${newHours}:${newMinutes} </b> `;
+											document.getElementById("textSpace").innerHTML = document.getElementById("textSpace").innerHTML + `<b>${childNodes.val().date.year}/${newMonth}/${newDay} ${newHours}:${newMinutes} </b> `;
 
 											if (!placeDots) {
 												document.getElementById("textSpace").appendChild(newText);

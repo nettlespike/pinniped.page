@@ -78,14 +78,7 @@
 					<div class="search">
 						<div class="search-main">
 							<b>SEARCH:</b>
-							<input
-								type="text"
-								autocapitalize="off"
-								autocomplete="off"
-								id="search"
-								placeholder="to use RegEx, start with an &ldquo;!&rdquo;"
-								spellcheck="false"
-							/>
+							<input type="text" autocapitalize="off" autocomplete="off" id="search" placeholder="to use RegEx, start with an &ldquo;!&rdquo;" spellcheck="false" />
 							<b tabindex="0" class="search-button" title="click to search"><i class="fa-solid fa-magnifying-glass"></i></b>
 						</div>
 						<div class="search-tags">
@@ -112,9 +105,7 @@
 					</p>
 					<p class="blog-archive">
 						<span class="blog-archive-list-marker"></span>
-						<span class="blog-archive-list-item half-opacity"
-							><i class="fa-solid fa-triangle-exclamation"></i><span class="blog-archive"> = has a minimum screen size</span></span
-						>
+						<span class="blog-archive-list-item half-opacity"><i class="fa-solid fa-triangle-exclamation"></i><span class="blog-archive"> = has a minimum screen size</span></span>
 					</p>
 					<div id="searchable"></div>
 
@@ -151,10 +142,7 @@
 
 			let tags = "";
 			for (let thing in responseJSON[project].tags) {
-				if (responseJSON[project].tags[thing][0] != "")
-					tags += `<span class="${thing}"><span class="tooltip">${responseJSON[project].tags[thing][0]} — ${
-						responseJSON[project].tags[thing][1]
-					}</span>${thing.toUpperCase()}</span>`;
+				if (responseJSON[project].tags[thing][0] != "") tags += `<span class="${thing}"><span class="tooltip">${responseJSON[project].tags[thing][0]} — ${responseJSON[project].tags[thing][1]}</span>${thing.toUpperCase()}</span>`;
 			}
 
 			projectElement.innerHTML = `<span class="blog-archive-list-marker"><i class="fa-solid fa-${responseJSON[project].icon} fa-fw"></i></span><span class="blog-archive-list-item"><a class="link" href="${link}" title="${project}">${project}</a> ${tags} <span class="blog-archive half-opacity">— ${responseJSON[project].description}</span>${flag}</span>`;
@@ -346,13 +334,7 @@
 				.querySelector("#randomProjectButton")
 				.setAttribute(
 					"href",
-					`projects+.html?search=%5E${encodeURIComponent(
-						projectNames[Math.floor(Math.random() * projectNames.length)]
-							.replace(/\//g, "\\/")
-							.replace(/\+/g, "\\+")
-							.replace(/\-/g, "\\-")
-							.replace(/&/g, "&amp;"),
-					)}%24&r=t`,
+					`projects+.html?search=%5E${encodeURIComponent(projectNames[Math.floor(Math.random() * projectNames.length)].replace(/\//g, "\\/").replace(/\+/g, "\\+").replace(/\-/g, "\\-").replace(/&/g, "&amp;"))}%24&r=t`,
 				);
 		}
 

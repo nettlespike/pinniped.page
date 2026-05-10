@@ -219,9 +219,8 @@
 					<hr />
 
 					<b class="small-text half-opacity" style="display: inline-block; text-align: justify">
-						The score above is based on a points system. Status entries of &ldquo;SEEMS TO BE WORKING&rdquo; or &ldquo;PLANNED MAINTENANCE&rdquo; get one point,
-						&ldquo;MINOR ISSUES&rdquo; get half a point, and &ldquo;MAJOR ISSUES&rdquo; or &ldquo;UNAVAILABLE&rdquo; get nothing. The total points are then
-						divided by the total number of entries. Check the console for the calculation.
+						The score above is based on a points system. Status entries of &ldquo;SEEMS TO BE WORKING&rdquo; or &ldquo;PLANNED MAINTENANCE&rdquo; get one point, &ldquo;MINOR ISSUES&rdquo; get half a point, and &ldquo;MAJOR
+						ISSUES&rdquo; or &ldquo;UNAVAILABLE&rdquo; get nothing. The total points are then divided by the total number of entries. Check the console for the calculation.
 					</b>
 
 					<hr style="margin-top: 20px" />
@@ -256,27 +255,19 @@
 					<div class="highlighted-box blue">
 						<i class="fa-solid fa-memo-circle-check"></i>
 
-						<p class="text">
-							<b>March 30th, 2026 @ 14:48</b><br /><a class="link" href="blog+.html" title="Blog+">Blog+</a> is now certified Good Enough&trade;.
-						</p>
+						<p class="text"><b>March 30th, 2026 @ 14:48</b><br /><a class="link" href="blog+.html" title="Blog+">Blog+</a> is now certified Good Enough&trade;.</p>
 					</div>
 
 					<div class="highlighted-box yellow">
 						<i class="fa-solid fa-table-cells-rows"></i>
 
-						<p class="text">
-							<b>March 29th, 2026 @ 22:41</b><br />Experimenting with <a class="link" href="blog+.html" title="Blog+">Blog+</a> being more like a table. Not
-							responsive whatsoever.
-						</p>
+						<p class="text"><b>March 29th, 2026 @ 22:41</b><br />Experimenting with <a class="link" href="blog+.html" title="Blog+">Blog+</a> being more like a table. Not responsive whatsoever.</p>
 					</div>
 
 					<div class="highlighted-box light-grey">
 						<i class="fa-solid fa-triangle-person-digging"></i>
 
-						<p class="text">
-							<b>March 1st, 2026 @ 01:35</b><br />updates to the
-							<a href="about.html#how-it-s-made" class="link">About page&rsquo;s &ldquo;how it&rsquo;s made&rdquo; section</a> are coming soon
-						</p>
+						<p class="text"><b>March 1st, 2026 @ 01:35</b><br />updates to the <a href="about.html#how-it-s-made" class="link">About page&rsquo;s &ldquo;how it&rsquo;s made&rdquo; section</a> are coming soon</p>
 					</div>
 
 					<div class="status-box">
@@ -315,6 +306,12 @@
 							<div></div>
 							<i class="fa-sharp fa-solid fa-triangle"></i>
 						</div>
+					</div>
+
+					<div class="highlighted-box blue">
+						<i class="fa-solid fa-lock-open"></i>
+
+						<p class="text"><b>May 6th, 2026 @ 22:56</b><br />command working again but GRT really needs to use modern cryptography; awaiting further testing</p>
 					</div>
 
 					<div class="highlighted-box yellow">
@@ -384,6 +381,12 @@
 							<div></div>
 							<i class="fa-sharp fa-solid fa-triangle"></i>
 						</div>
+					</div>
+
+					<div class="highlighted-box red">
+						<i class="fa-solid fa-route"></i>
+
+						<p class="text"><b>May 6th, 2026 @ 22:53</b><br />London Transit added a temporary route 111 that breaks my page. But...it&rsquo;s temporary so I don&rsquo;t want to put in the effort to accommodate it.</p>
 					</div>
 
 					<div class="status-box">
@@ -734,13 +737,16 @@
 						</div>
 					</div>
 
+					<div class="highlighted-box red">
+						<i class="fa-solid fa-icons"></i>
+
+						<p class="text"><b>May 5th, 2026 @ 21:12</b><br />puzzles with Font Awesome icons are broken (but hopefully no other puzzles)</p>
+					</div>
+
 					<div class="highlighted-box light-grey">
 						<i class="fa-solid fa-handshake-angle"></i>
 
-						<p class="text">
-							<b>December 14th, 2025 @ 19:59</b><br />the help document is outdated, a <a href="projects/think-four/help.html" class="link">new page</a> is
-							coming soon
-						</p>
+						<p class="text"><b>December 14th, 2025 @ 19:59</b><br />the help document is outdated, a <a href="projects/think-four/help.html" class="link">new page</a> is coming soon</p>
 					</div>
 
 					<div class="status-box">
@@ -992,7 +998,7 @@
 			const messages = ["PLANNED MAINTENANCE", "UNAVAILABLE", "CRITICAL ISSUES", "MINOR ISSUES", "SEEMS TO BE WORKING"];
 			const positions = [22, 102, 202, 282, 362];
 
-			const statuses = [3, 0, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 4, 4, 4, 4, 4, 4, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4];
+			const statuses = [3, 0, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 4, 4, 4, 4, 4, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4];
 
 			let i = 0;
 			let workingTotal = 0;
@@ -1007,9 +1013,7 @@
 				statusBox.querySelector(".fa-triangle").style = `left: ${positions[statuses[i]]}px`;
 				document.querySelector(".mini-summary").innerHTML =
 					document.querySelector(".mini-summary").innerHTML +
-					`<a class="same-page-link" href="#${statusBox.children[0].children[0].id}" title="${statusBox.children[0].children[0].id
-						.replace(/-/g, " ")
-						.replace("fa random", "fa-random")}"><div class="${classes[statuses[i]]}"></div></a>`;
+					`<a class="same-page-link" href="#${statusBox.children[0].children[0].id}" title="${statusBox.children[0].children[0].id.replace(/-/g, " ").replace("fa random", "fa-random")}"><div class="${classes[statuses[i]]}"></div></a>`;
 				i++;
 			});
 

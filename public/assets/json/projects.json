@@ -61,7 +61,7 @@
 			"tag": ["", ""]
 		},
 		"version": "2.3.3",
-		"featured": 4
+		"featured": 3
 	},
 	"Chess": {
 		"basic": true,
@@ -221,7 +221,7 @@
 			"tag": ["", ""]
 		},
 		"version": "2.1.2",
-		"featured": 0
+		"featured": 7
 	},
 	"Finite Craft": {
 		"basic": false,
@@ -333,7 +333,7 @@
 			"tag": ["", ""]
 		},
 		"version": "",
-		"featured": 3
+		"featured": 2
 	},
 	"KC": {
 		"basic": false,
@@ -429,7 +429,7 @@
 			"tag": ["", ""]
 		},
 		"version": "",
-		"featured": 1
+		"featured": 4
 	},
 	"PlainPlanes": {
 		"basic": true,
@@ -461,7 +461,7 @@
 			"tag": ["", ""]
 		},
 		"version": "",
-		"featured": 5
+		"featured": 6
 	},
 	"progress": {
 		"basic": false,
@@ -573,7 +573,7 @@
 			"tag": ["", ""]
 		},
 		"version": "",
-		"featured": 2
+		"featured": 5
 	},
 	"Think Four": {
 		"basic": false,
@@ -637,7 +637,7 @@
 			"tag": ["", ""]
 		},
 		"version": "",
-		"featured": 0
+		"featured": 1
 	},
 	"Typewriter Simulator": {
 		"basic": false,
